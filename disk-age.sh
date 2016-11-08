@@ -4,6 +4,7 @@ WEB="/var/www/html/_admin/Disk_Age.html"
 #echo "" > $TMP
 #echo "" > $WEB
 date > $TMP	# Initialize file and add date
+#for i in `lshw -short | grep disk | awk '{print $2}' | grep -v cd`; do	# Gotta make this smarter
 for i in a b c d e; do	# Gotta make this smarter
         {
 	echo "########################################################"
